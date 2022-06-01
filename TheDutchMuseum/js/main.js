@@ -14,11 +14,12 @@ function toggleMenuTab(){
         hidden = false;
     }
     else{
-        headerTab.style.transform = "translateX(400px)";
+        headerTab.style.transform = "translateX(100%)";
         menuItem.style.transform = "rotate(0)";
         hidden = true;
     }
 }
+
 
 
 //--- SECTION ELEMENT ---------------------------
@@ -59,3 +60,17 @@ function resetOpacity(){
         section.innerHTML = sectionValue;
     }
 }
+
+function Person(){
+    var energy = 100;
+    var progress = 0;
+    while(energy > 0){
+        progress++;
+        energy--;
+        console.log(progress);
+    }
+}
+
+Person(60);
+
+//
