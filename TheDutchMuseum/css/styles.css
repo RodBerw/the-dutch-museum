@@ -1,10 +1,22 @@
+
+
 body{
     margin: 0;
 }
 
-/* .banner{
-    clip-path: url(#banner-img-clip-path);
-} */
+.banner{
+    /* clip-path: url(#banner-img-clip-path); */
+    z-index: 1;
+    -webkit-mask: url(../images/imgs/banner-mask.png);
+    mask-mode: alpha;
+    -webkit-mask-size: 110%;
+    -webkit-mask-position: center;
+    -webkit-mask-position-y: -18vw;
+    -webkit-mask-repeat: no-repeat;
+
+}
+
+
 
 #banner-img{
     width: 100%;
@@ -30,7 +42,7 @@ body{
 #banner-text-group > h1{
     font-family: 'dubiel-webfont';
     font-weight: 100;
-    font-size: 9rem;
+    font-size: 9vw;
     margin: 0;
 }
 
@@ -38,9 +50,9 @@ body{
     font-family: 'montserrat';
     font-weight: 500;
     width: 80%;
-    font-size: 2rem;
-    letter-spacing: .9rem;
-    line-height: 3.5rem;
+    font-size: 2vw;
+    letter-spacing: .9vw;
+    line-height: 3.5vw;
     margin: 0;
 }
 
@@ -50,24 +62,26 @@ body{
 }
 
 #credit-name{
+    display: inline-block;
     position: relative;
-    float: right;
-    right: 3.5vw;
-    bottom: 4vw;
+    text-align: right;
+    right: 0;
+    width: 98%;
     color: white;
     font-family: 'montserrat';
     font-weight: 1000;
-    font-size: 1rem;
+    font-size: .7vw;
     letter-spacing: .5rem;
-    margin: 0;
+    margin: 7% 0 0 0;
 }
 
 #get-started{
     display: inline-block; 
     position: relative;
     bottom: 150px;
-    left: 10vw;
+    left: 12%;
     transition: bottom .5s;
+    margin: 0;
 }
 
 #get-started > img{
@@ -91,20 +105,19 @@ body{
     bottom: 200px;
 }
 
-.background{
+#background-img{
     width: 100%;
     position: fixed;
-    bottom: 0;
+    bottom: -100px;
     z-index: -10;
 }
 
-
 #about-text-block{
     position: relative;
-    top: -408px;
-    z-index: 1;
+    z-index: -1;
+    top: -1000px;
     width: 90%;
-    height: 1000px;
+    height: 3000px;
     margin: auto;
     background-color: rgb(7, 7, 7);
 }
@@ -129,6 +142,7 @@ body{
 
 @media (max-width: 1100px) {
 
+
     #banner-text-group{
         top: 90px;
     }
@@ -145,8 +159,8 @@ body{
 
     #get-started{
         transform: scale(.6);
-        bottom: 175px;
-        left: -50px;
+        bottom: 200px;
+        left: 6%;
     }
 
     #credit-name{
