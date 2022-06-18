@@ -1,7 +1,7 @@
 
-
 body{
     margin: 0;
+    max-width: 100%;
     overflow-x: hidden;
 }
 
@@ -16,8 +16,6 @@ body{
     -webkit-mask-repeat: no-repeat;
 
 }
-
-
 
 #banner-img{
     width: 100%;
@@ -43,8 +41,11 @@ body{
 #banner-text-group > h1{
     font-family: 'dubiel-webfont';
     font-weight: 100;
-    font-size: 9vw;
+    font-size: 10vw;
     margin: 0;
+    letter-spacing: .25vw;
+    -webkit-transform-origin-x: 0%;
+    -webkit-transform: scaleX(.75);
 }
 
 #banner-text-group > h2{
@@ -52,7 +53,7 @@ body{
     font-weight: 500;
     width: 80%;
     font-size: 2vw;
-    letter-spacing: .9vw;
+    letter-spacing: .5vw;
     line-height: 3.5vw;
     margin: 0;
 }
@@ -73,7 +74,7 @@ body{
     font-weight: 1000;
     font-size: .7vw;
     letter-spacing: .5rem;
-    margin: 7% 0 0 0;
+    margin: 5% 0 0 0;
 }
 
 #get-started{
@@ -104,6 +105,7 @@ body{
 
 #get-started:hover{
     bottom: 200px;
+    cursor: pointer;
 }
 
 #background-img{
@@ -113,20 +115,24 @@ body{
     z-index: -10;
 }
 
+
 #about-text-block{
     position: relative;
-    z-index: -1;
+    z-index: -2;
     top: -1000px;
     width: 85%;
-    height: 3000px;
+    height: 1840px;
     margin: auto;
     background-color: rgb(7, 7, 7);
+    backdrop-filter: blur(25px);
     min-width: 1000px;
+    padding: 0;
 }
 
 #about-text-block > div{
     display: grid;
     position: relative;
+    z-index: 1;
     top: 600px;
     width: 100%;
     height: 800px;
@@ -154,10 +160,13 @@ body{
     display: inline-block;
     text-align: right;
     font-family: 'dubiel-webfont';
-    font-size: 10em;
+    font-size: 12em;
     font-weight: 300;
     color: white;
     white-space: pre;
+    letter-spacing: .25vw;
+    -webkit-transform-origin-x: 0%;
+    -webkit-transform: scaleX(.75);
 }
 
 #about-text-block h2{
@@ -194,6 +203,18 @@ p{
     line-height: 1.25em;
     color: white;
     text-align: justify;
+}
+
+#search-by-block{
+    position: relative;
+    z-index: -2;
+    top: -800px;
+    width: 85%;
+    height: 800px;
+    margin: auto;
+    background-color: rgb(7, 7, 7);
+    backdrop-filter: blur(25px);
+    min-width: 1000px;
 }
 
 /* Other */

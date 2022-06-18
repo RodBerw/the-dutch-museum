@@ -32,6 +32,8 @@ var sectionValue;
 window.addEventListener("scroll", function(){
     pageScroll = window.scrollY;
     var section = document.getElementById("section");
+    var background = this.document.getElementById("background-img");
+    var aboutTextBlock = document.getElementById("about-text-block");
 
     //Set section element content
     if(pageScroll <= 100){
@@ -42,7 +44,7 @@ window.addEventListener("scroll", function(){
             section.style.opacity = 0;
             setTimeout(resetOpacity, 250);
         }
-    }else if(pageScroll > 100){
+    }else if(pageScroll > 100 && pageScroll < 1600){
 
         if(sectionLevel != 2){
             sectionValue = "ABOUT";
@@ -50,7 +52,28 @@ window.addEventListener("scroll", function(){
             section.style.opacity = 0;
             setTimeout(resetOpacity, 250);
         }
+    }else if(pageScroll >= 1800){
+
+        if(sectionLevel != 3){
+            sectionValue = "SEARCH BY";
+            sectionLevel = 3;
+            section.style.opacity = 0;
+            setTimeout(resetOpacity, 250);
+        }
     }
+
+    console.log(pageScroll);
+
+    //Set background brightness
+    var bgB = ((pageScroll - 1000) * 50) / 1000;
+    var bgBF = Math.min(Math.max(bgB,0), 50);
+    background.style.filter = `brightness(${100 - bgBF}%)`;
+
+    //Set about text block scale
+    var aTBx = ((pageScroll - 1000) * 15) / 1000;
+    var aTBxF = Math.min(Math.max(aTBx,0), 7.5);
+    aboutTextBlock.style.padding = `0 ${(aTBxF)}% 0 ${(aTBxF)}%`;
+    aboutTextBlock.style.margin = "auto";
 
 }, {passive:true});
 
@@ -61,16 +84,5 @@ function resetOpacity(){
     }
 }
 
-function Person(){
-    var energy = 100;
-    var progress = 0;
-    while(energy > 0){
-        progress++;
-        energy--;
-        console.log(progress);
-    }
-}
-
-Person(60);
 
 //
