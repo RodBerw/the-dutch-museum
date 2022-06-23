@@ -2,6 +2,13 @@
 
 var hidden = true;
 
+
+//Get started button
+
+function getStarted(){
+    window.scroll(0, 900);
+}
+
 //Toggle menu visibility
 function toggleMenuTab(){
 
@@ -22,7 +29,7 @@ function toggleMenuTab(){
 
 
 
-//--- SECTION ELEMENT ---------------------------
+//--- SCROLL FUNCTION ---------------------------
 
 var pageScroll;
 var sectionLevel = 1;
@@ -85,4 +92,23 @@ function resetOpacity(){
 }
 
 
-//
+//--- SEARCH BY ---------------------
+
+var sItemInterval;
+var currentElement;
+function sItemEnter(element){
+    element.children[0].style.transform = "scale(1.1)";
+    element.addEventListener("mousemove", sItemMove);
+    currentElement = element;
+}
+
+function sItemLeave(element){
+    element.children[0].style.transform = "scale(1)";
+    element.children[1].style.transform = "scale(1)";
+    element.children[1].style.transform = "translate(0,0)";
+}
+
+function sItemMove(mouse){
+    console.log(mouse.movementX);
+    currentElement.children[1].style.transform = `scale(1.05) translate(${-mouse.movementX * 2}px,${-mouse.movementY * 2}px)`;
+}

@@ -64,7 +64,7 @@
                  <p id="credit-name">MADE BY RODOLFO BERWANGER</p>
              </div>
              
-            <div id="get-started">
+            <div onclick="getStarted()" id="get-started">
                 <img src="images/svg/thin-square.svg" alt="">
                 <p>GET STARTED</p>
             </div>
@@ -72,10 +72,10 @@
              
         </div>
 
+        <img id="background-img" src="images/imgs/background-1.jpg" alt="none" srcset="">
+
         <!-- About the museum -->
-        <div id="about-the-museum">         
-            <img id="background-img" src="images/imgs/background-1.jpg" alt="none" srcset="">
-            
+        <div id="about-the-museum">           
             <div id="about-text-block">
                 <div>
                     <div class="item-1">
@@ -95,7 +95,18 @@
         <!-- Search by -->
         <div id="search-by">
             <div id="search-by-block">
-                
+                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-1" style="top: 60px;">
+                    <h2>ARTISTS</h2>
+                    <img src="images/imgs/rembrandt-self.jpg" width="100%" style="top: -25%;" alt="" srcset="">
+                    </div>
+                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-2" style="top: 120px">
+                    <h2>ARTWORKS</h2>
+                    <img src="images/imgs/background-1.jpg" width="155%" style="top: -25%; left: -12%;" alt="" srcset="">
+                    </div>
+                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-3" style="top: 180px">
+                    <h2>ARTICLES &<br> REVIEWS</h2>
+                    <img src="images/imgs/rembrandt-drawing.jpg" width="110%" style="top: -35%; left: -5%;" alt="" srcset="">
+                    </div>
             </div>
         </div>
     </div>
