@@ -59,11 +59,19 @@ window.addEventListener("scroll", function(){
             section.style.opacity = 0;
             setTimeout(resetOpacity, 250);
         }
-    }else if(pageScroll >= 1800){
+    }else if(pageScroll >= 1800 && pageScroll < 2500){
 
         if(sectionLevel != 3){
             sectionValue = "SEARCH BY";
             sectionLevel = 3;
+            section.style.opacity = 0;
+            setTimeout(resetOpacity, 250);
+        }
+    }else if(pageScroll >= 2500){
+
+        if(sectionLevel != 4){
+            sectionValue = "";
+            sectionLevel = 4;
             section.style.opacity = 0;
             setTimeout(resetOpacity, 250);
         }

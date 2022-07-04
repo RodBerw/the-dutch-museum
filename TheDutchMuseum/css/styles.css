@@ -5,6 +5,10 @@ body{
     /* overflow-x: hidden !important; */
 }
 
+#main{
+    height: 3250px;
+}
+
 *{
     scroll-behavior: smooth;
 }
@@ -271,13 +275,99 @@ p{
     cursor: pointer;
 }
 
+#sb-t1{
+    display: inline-block;
+    left: 78.5%;
+    top: -810px;
+    position: relative;
+    white-space: initial;
+}
+
+#sb-t2{
+    display: inline-block;
+    left: 2.5%;
+    top: -200px;
+    position: relative;
+    white-space: initial;
+}
+
+#sb-t1 > p{
+    text-align: right;
+    color: white;
+    font-family: "montserrat";
+    font-weight: 600;
+    font-size: 1.2vw;
+    letter-spacing: .75rem;
+}
+
+#sb-t2 > p{
+    text-align: right;
+    color: white;
+    font-family: "montserrat";
+    font-weight: 600;
+    font-size: 1vw;
+    letter-spacing: .75rem;
+}
+
+#footer{
+    background-color: #09181f;
+    margin: 0;
+}
+
+#footer-grid{
+    display: grid;
+    width: 100%;
+    margin-bottom: 25px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: column;
+}
+
+.footer-item{
+    display: inline-block;
+    margin: 25px;
+}
+
+.footer-item img{
+    display: block;
+    width: 75%;
+    margin: 25% auto 0 auto;
+    filter: invert(100%) sepia(8%) saturate(31%) hue-rotate(246deg) brightness(106%) contrast(110%);
+}
+
+.footer-item a{
+    text-decoration: none;
+}
+
+.footer-item h1{
+    display: inline-block;
+    color: white;
+    width: 35%;
+    margin: 50% auto 0 auto;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0;
+    margin: 12.5% 25% 0 25%;
+    font-weight: 100;
+    font-size: 3.5vw;
+    line-height: 3.25vw;
+}
+
+#footer-credit > p{
+    margin: 0;
+    padding: 15px;
+    font-family: 'montserrat';
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: .25rem;
+}
+
+
 /* Other */
 
 #section{
     position: fixed;
     right: 0;
     top: 450px;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     writing-mode: vertical-lr;
     transform-origin: 0 25% 0;
@@ -320,5 +410,12 @@ p{
         font-size: 25px;
     }
 
+    #sb-t1{
+        left: 74%;
+    }
+
+    #search-by p{
+        font-size: 16px;
+    }
 }
 
