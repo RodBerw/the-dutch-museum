@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Dutch Museum - Artists</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/menu_styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/artists_styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="grid-container-logo">
+        <div>
+          <a href="index.html" id="nav-logo" class="button">THE DUTCH MUSEUM</a>
+        </div>
+        <div class="nav-menu-item">
+          <img
+            id="nav-menu-item-img"
+            class="button"
+            src="images/icons/menu-icon.svg"
+            alt=""
+            onclick="toggleMenuTab()"
+          />
+        </div>
+      </div>
+
+      <div id="header-tab">
+        <div id="header-tab-grid">
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">HOME</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">ABOUT THE MUSEUM</a>
+          </div>
+          <div class="tab-link">
+            <a href="artists.html" class="tab-button button">ARTISTS</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">ARTWORKS</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button"
+              >ARTICLES & REVIEWS</a
+            >
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">INFO</a>
+          </div>
+          <div class="tab-link">
+            <button
+              onclick="closeMenuTab()"
+              id="tab-link-close"
+              class="tab-button button"
+            >
+              CLOSE
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div id="artists-main">
+      <img
+        id="artists-background-img"
+        src="images/imgs/background-1.jpg"
+        alt="none"
+        srcset=""
+      />
+
+      <div id="content">
+        <h1>ALL ARTISTS</h1>
+        <div id="dropdown">
+          <label for="order">ORDER BY</label>
+          <select name="order" id="order">
+            <option value="relevance">RELEVANCE</option>
+            <option value="name-a-z">NAME(A>Z)</option>
+            <option value="name-z-a">NAME(Z>A)</option>
+            <option value="date-c">DATE(CRESCENT)</option>
+            <option value="date-d">DATE(DECRESCENT)</option>
+          </select>
+        </div>
+        <div id="container-1">
+          <p>a</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

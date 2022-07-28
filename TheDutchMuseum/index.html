@@ -1,145 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Museum</title>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/menu_styles.css">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body id="body1">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Dutch Museum</title>
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/menu_styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body id="body1">
     <header>
-        <div class="grid-container-logo">
-            <div>
-                <a href="index.html" id="nav-logo" class="button">THE DUTCH MUSEUM</a>
-            </div>
-            <div class="nav-menu-item">
-                <img id="nav-menu-item-img" class="button" src="images/icons/menu-icon.svg" alt="" onclick="toggleMenuTab()">
-            </div>
+      <div class="grid-container-logo">
+        <div>
+          <a href="index.html" id="nav-logo" class="button">THE DUTCH MUSEUM</a>
         </div>
-
-        <div id="header-tab">
-        
-            <div id="header-tab-grid">
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">HOME</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">ABOUT THE MUSEUM</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">ARTISTS</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">ARTWORKS</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">ARTICLES & REVIEWS</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" class="tab-button button">INFO</a>
-                </div>
-                <div class="tab-link">
-                    <a href="index.html" id="tab-link-close" class="tab-button button">CLOSE</a>
-                </div>
-            </div>
-            
+        <div class="nav-menu-item">
+          <img
+            id="nav-menu-item-img"
+            class="button"
+            src="images/icons/menu-icon.svg"
+            alt=""
+            onclick="toggleMenuTab()"
+          />
         </div>
+      </div>
 
+      <div id="header-tab">
+        <div id="header-tab-grid">
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">HOME</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">ABOUT THE MUSEUM</a>
+          </div>
+          <div class="tab-link">
+            <a href="artists.html" class="tab-button button">ARTISTS</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">ARTWORKS</a>
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button"
+              >ARTICLES & REVIEWS</a
+            >
+          </div>
+          <div class="tab-link">
+            <a href="index.html" class="tab-button button">INFO</a>
+          </div>
+          <div class="tab-link">
+            <button
+              onclick="closeMenuTab()"
+              id="tab-link-close"
+              class="tab-button button"
+            >
+              CLOSE
+            </button>
+          </div>
+        </div>
+      </div>
     </header>
 
     <div id="main">
+      <!-- Banner -->
+      <div class="banner">
+        <img
+          id="banner-img-paper"
+          src="images/imgs/banner-img-paper.png"
+          alt="none"
+        />
 
-        <!-- Banner -->
-        <div class="banner">
-            
-            <img id="banner-img-paper" src="images/imgs/banner-img-paper.png" alt="none">
-            
-             <div id="banner-text-group">
-                 <h1 class="banner-text">ART COLLECTION</h1>
-                 <h2 class="banner-text">LEARN FROM THE OLD MASTERS</h2>
-                 <p id="credit-name">MADE BY RODOLFO BERWANGER</p>
-             </div>
-             
-            <div onclick="getStarted()" id="get-started">
-                <img src="images/svg/thin-square.svg" alt="">
-                <p>GET STARTED</p>
-            </div>
-
-             
+        <div id="banner-text-group">
+          <h1 class="banner-text">ART COLLECTION</h1>
+          <h2 class="banner-text">LEARN FROM THE OLD MASTERS</h2>
+          <p id="credit-name">MADE BY RODOLFO BERWANGER</p>
         </div>
 
-        <img id="background-img" src="images/imgs/background-1.jpg" alt="none" srcset="">
-
-        <!-- About the museum -->
-        <div id="about-the-museum">           
-            <div id="about-text-block">
-                <div>
-                    <div class="item-1">
-                        <div style="text-align: right;">
-                            <h1>ABOUT THE   <br>MUSEUM</h1>
-                            <h2>The project gathers everything you need to know about the history of Dutch art and its masters.</h2>
-                            <p>Explore the vast collection of artworks provided by the Rijksmuseum digital archive, as well as several articles and reviews on what is considered to be one of the most important periods in art.</p>
-                        </div>
-                    </div>
-                    <div class="item-2">
-                        <img src="images/imgs/about-the-museum-img-faded.png" alt="" srcset="">
-                    </div>
-                </div>
-            </div>       
+        <div onclick="getStarted()" id="get-started">
+          <img src="images/svg/thin-square.svg" alt="" />
+          <p>GET STARTED</p>
         </div>
+      </div>
 
-        <!-- Search by -->
-        <div id="search-by">
-            <div id="search-by-block">
-                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-1" style="top: 60px;">
-                    <h2>ARTISTS</h2>
-                    <img src="images/imgs/rembrandt-self.jpg" width="100%" style="top: -25%;" alt="" srcset="">
-                    </div>
-                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-2" style="top: 120px">
-                    <h2>ARTWORKS</h2>
-                    <img src="images/imgs/background-1.jpg" width="155%" style="top: -25%; left: -12%;" alt="" srcset="">
-                    </div>
-                <div onmouseover="sItemEnter(this)" onmouseleave="sItemLeave(this)" class="search-item" id="sc-3" style="top: 180px">
-                    <h2>ARTICLES &<br> REVIEWS</h2>
-                    <img src="images/imgs/rembrandt-drawing.jpg" width="110%" style="top: -35%; left: -5%;" alt="" srcset="">
-                    </div>
+      <img
+        id="background-img"
+        src="images/imgs/background-1.jpg"
+        alt="none"
+        srcset=""
+      />
+
+      <!-- About the museum -->
+      <div id="about-the-museum">
+        <div id="about-text-block">
+          <div>
+            <div class="item-1">
+              <div style="text-align: right">
+                <h1>ABOUT THE <br />MUSEUM</h1>
+                <h2>
+                  The project gathers everything you need to know about the
+                  history of Dutch art and its masters.
+                </h2>
+                <p>
+                  Explore the vast collection of artworks provided by the
+                  Rijksmuseum digital archive, as well as several articles and
+                  reviews on what is considered to be one of the most important
+                  periods in art.
+                </p>
+              </div>
             </div>
-            <div id="sb-t1">
-                <p>WHAT<br>ARE<br>YOU<br>LOOKING<br>FOR?</p>
+            <div class="item-2">
+              <img
+                src="images/imgs/about-the-museum-img-faded.png"
+                alt=""
+                srcset=""
+              />
             </div>
-            <div id="sb-t2">
-                <p>THE DUTCH MUSEUM</p>
-            </div>
+          </div>
         </div>
+      </div>
+
+      <!-- Search by -->
+      <div id="search-by">
+        <div id="search-by-block">
+          <a href="artists.html">
+            <div
+              onmouseover="sItemEnter(this)"
+              onmouseleave="sItemLeave(this)"
+              class="search-item"
+              id="sc-1"
+              style="top: 60px"
+            >
+              <h2>ARTISTS</h2>
+              <img
+                src="images/imgs/rembrandt-self.jpg"
+                width="100%"
+                style="top: -25%"
+                alt=""
+                srcset=""
+              />
+            </div>
+          </a>
+
+          <div
+            onmouseover="sItemEnter(this)"
+            onmouseleave="sItemLeave(this)"
+            class="search-item"
+            id="sc-2"
+            style="top: 120px"
+          >
+            <h2>ARTWORKS</h2>
+            <img
+              src="images/imgs/background-1.jpg"
+              width="155%"
+              style="top: -25%; left: -12%"
+              alt=""
+              srcset=""
+            />
+          </div>
+          <div
+            onmouseover="sItemEnter(this)"
+            onmouseleave="sItemLeave(this)"
+            class="search-item"
+            id="sc-3"
+            style="top: 180px"
+          >
+            <h2>
+              ARTICLES &<br />
+              REVIEWS
+            </h2>
+            <img
+              src="images/imgs/rembrandt-drawing.jpg"
+              width="110%"
+              style="top: -35%; left: -5%"
+              alt=""
+              srcset=""
+            />
+          </div>
+        </div>
+        <div id="sb-t1">
+          <p>WHAT<br />ARE<br />YOU<br />LOOKING<br />FOR?</p>
+        </div>
+        <div id="sb-t2">
+          <p>THE DUTCH MUSEUM</p>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <div id="footer">
-        <div id="footer-grid">
-            <div class="footer-item"><a href="">
-                <h1>THE DUTCH MUSEUM</h1>
-            </a></div>
-            <div class="footer-item">
-                <a href="https://www.rijksmuseum.nl/nl" target="_blank">
-                    <img src="images/svg/rijksmuseum-logo-svg-vector.svg" alt="none" srcset="">
-                </a></div>
-            <div class="footer-item">
-                <ul>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Credits</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </div>
+      <div id="footer-grid">
+        <div class="footer-item">
+          <a href="">
+            <h1>THE DUTCH MUSEUM</h1>
+          </a>
         </div>
-        <div id="footer-credit">
-            <p>Made by Rodolfo Berwanger Liberado</p>
+        <div class="footer-item">
+          <a href="https://www.rijksmuseum.nl/nl" target="_blank">
+            <img
+              src="images/svg/rijksmuseum-logo-svg-vector.svg"
+              alt="none"
+              srcset=""
+            />
+          </a>
         </div>
+        <div class="footer-item">
+          <ul>
+            <li><a href="">About</a></li>
+            <li><a href="">Credits</a></li>
+            <li><a href="">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="footer-credit">
+        <p>Made by Rodolfo Berwanger Liberado</p>
+      </div>
     </div>
-    
+
     <p id="section">HOME</p>
 
     <!-- Libs -->
@@ -148,5 +224,5 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/pixi-functions.js"></script>
-</body>
+  </body>
 </html>

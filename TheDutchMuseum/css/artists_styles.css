@@ -1,0 +1,76 @@
+#artists-main {
+  font-family: "montserrat";
+  font-weight: 600;
+  font-size: 2.5vw;
+  letter-spacing: 0.45rem;
+
+  width: 100%;
+  position: absolute;
+}
+
+#artists-background-img {
+  width: 110%;
+  position: absolute;
+  top: 0;
+  left: -25px;
+  filter: blur(3px) brightness(75%);
+  z-index: -2;
+}
+
+#content {
+  width: 100%;
+  height: 1500px;
+  display: fixed;
+}
+
+#container-1 {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  margin-top: 225px;
+}
+
+h1 {
+  top: 140px;
+  left: 5%;
+  color: white;
+  font-size: 1.9vw;
+  position: absolute;
+  letter-spacing: 0.8rem;
+}
+
+#dropdown {
+  top: 150px;
+  right: 5%;
+  position: absolute;
+}
+
+label {
+  color: white;
+  font-size: 0.6vw;
+}
+
+select,
+option {
+  background-color: black;
+  letter-spacing: 0.15rem;
+  padding: 0.5vw;
+  font-size: 0.8vw;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 1100px) {
+  h1 {
+    font-size: 15.5pt;
+  }
+
+  label {
+    font-size: 6pt;
+  }
+
+  select,
+  option {
+    font-size: 6pt;
+  }
+}

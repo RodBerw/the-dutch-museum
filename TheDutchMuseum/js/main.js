@@ -27,6 +27,10 @@ function toggleMenuTab(){
     }
 }
 
+function closeMenuTab(){
+    toggleMenuTab();
+}
+
 
 
 //--- SCROLL FUNCTION ---------------------------
